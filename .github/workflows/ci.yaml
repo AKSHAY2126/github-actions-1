@@ -10,7 +10,7 @@ jobs:
 
     strategy:
       matrix:
-        python-version: [3.8]
+        python-version: 3.8
 
     steps:
       - name: Check out the repository
@@ -19,7 +19,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: ${{ matrix.python-version }}
+          python-version: python-version
 
       - name: Install dependencies
         run: |
